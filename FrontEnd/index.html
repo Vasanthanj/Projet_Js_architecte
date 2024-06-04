@@ -42,6 +42,57 @@
 		<h2>Mes Projets</h2>
 		<div class="modify"></div>
 		</div>
+		<!--Créa de la MODAL-->
+		<aside id="modal" class="modal" aria-hidden="true">
+			<div id="modal-primaire" class="modal-wrapper">
+				<button class="modal-close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g id="xmark">
+					<path id="Vector" d="M17.6546 8.05106C18.1235 7.58214 18.1235 6.82061 17.6546 6.35169C17.1856 5.88277 16.4241 5.88277 15.9552 6.35169L12.005 10.3056L8.05106 6.35544C7.58214 5.88652 6.82061 5.88652 6.35169 6.35544C5.88277 6.82436 5.88277 7.58589 6.35169 8.05481L10.3056 12.005L6.35544 15.9589C5.88652 16.4279 5.88652 17.1894 6.35544 17.6583C6.82436 18.1272 7.58589 18.1272 8.05481 17.6583L12.005 13.7044L15.9589 17.6546C16.4279 18.1235 17.1894 18.1235 17.6583 17.6546C18.1272 17.1856 18.1272 16.4241 17.6583 15.9552L13.7044 12.005L17.6546 8.05106Z" fill="black"/>
+					</g>
+					</svg>
+					</button>
+				<h3 class="modal-title">Galerie photo</h3>
+				<div class="modal-work"></div>
+				<a href="modal-wrapper__secondaire" class="modal-bouton">Ajouter une photo</a>
+			</div>
+			<div id="modal-wrapper__secondaire" class="modal-wrapper__secondaire">
+				<a class="retour-modal-primaire" href="#modal-primaire"><i id="arrow" class="fa-solid fa-arrow-left"></i></a>
+				<button class="modal-close modal-secondaire-close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g id="xmark1">
+					<path id="Vector1" d="M17.6546 8.05106C18.1235 7.58214 18.1235 6.82061 17.6546 6.35169C17.1856 5.88277 16.4241 5.88277 15.9552 6.35169L12.005 10.3056L8.05106 6.35544C7.58214 5.88652 6.82061 5.88652 6.35169 6.35544C5.88277 6.82436 5.88277 7.58589 6.35169 8.05481L10.3056 12.005L6.35544 15.9589C5.88652 16.4279 5.88652 17.1894 6.35544 17.6583C6.82436 18.1272 7.58589 18.1272 8.05481 17.6583L12.005 13.7044L15.9589 17.6546C16.4279 18.1235 17.1894 18.1235 17.6583 17.6546C18.1272 17.1856 18.1272 16.4241 17.6583 15.9552L13.7044 12.005L17.6546 8.05106Z" fill="black"/>
+					</g>
+					</svg>
+				</button>
+				<h3 class="modal__secondaire-title">Ajout Photo</h3>
+				<div class="modal__secondaire-photo">
+					<div class="image-preview-hidden"></div>
+					<div class="ajout-photo">
+						<i class="fa-regular fa-image" id="image-placeholder"></i>
+						<label for="photo-file">+ Ajouter photo
+							<input type="file" id="photo-file">
+						</label>
+						<p>jpg, png : 4mo max</p>
+						<span id="modal__secondaire-message-erreur"></span>
+					</div>
+				</div>
+				<form id="add-photo-form">
+					<label for="photo-title">Titre</label>
+					<input type="text" id="photo-title" name="title">
+					<label for="photo-category">Catégorie</label>
+					<select id="photo-category" name="category">
+						<option></option>
+					</select>
+					<hr/>
+					<input id="submitValider" type="submit" value="Valider">
+					<div class="messageForm">
+						<span id="error-messageChamp"></span>
+						<span id="addProject"></span>
+					</div>
+				</form>
+			</div>
+		</aside>
 		<div class="gallery">
 			<figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
