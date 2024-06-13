@@ -103,7 +103,7 @@ function filtreTravauxParCategories (works, categoryId){
 
 genererWork();
 
-//////////////
+
 // Modification de la page en fonction de l'état de connexion de l'utilisateur
 // Banner
 
@@ -391,9 +391,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             alert('Photo ajoutée avec succès');
-            
+            //actualiser la galerie des travaux modal sans recharger la page
             await genererWorkModal();
-            
+            // actualiser la galerie des travaux sans recharger la page
             await genererWork();
             
         } catch (error) {
@@ -401,6 +401,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Remplir les catégories
+    // Remplir les catégories lors du chargement de la page
     remplirCategories();
 });
