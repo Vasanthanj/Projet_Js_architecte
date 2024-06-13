@@ -87,6 +87,7 @@ async function creerFiltreBouttons(works){
     const modifyContainer = document.querySelector(".modify_container")
     modifyContainer.insertAdjacentElement("afterend", divFilters); 
 }
+
 // Fonction pour filtrer les travaux par catégorie
 function filtreTravauxParCategories (works, categoryId){
     let filtreWorks;
@@ -273,7 +274,6 @@ function supprimeModalWork(){
 genererWork();
 
 // Gestion  de l'aperçu de l'image et remplacement du contenu dans la modal secondaire
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const fileInput = document.getElementById('photo-file');
